@@ -1,0 +1,85 @@
+<div class="card shadow p-4 mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <table class="table">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Health</th>
+                            <th scope="col">type</th>
+                            <th scope="col">Age</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        #foreach($animal in $animals)
+                        <tr>
+                            <th scope="row">$animal.getId()</th>
+                            <td>$animal.getName()</td>
+                            <td>Null</td>
+                            <td>$animal.getTYPE()</td>
+                            <td>Null</td>
+                        </tr>
+                        #end
+
+                        #foreach($endangeredAnimal in $endangeredAnimals)
+                        <tr>
+                            <th scope="row">$endangeredAnimal.getId()</th>
+                            <td>$endangeredAnimal.getName()</td>
+                            <td>$endangeredAnimal.getHealth()</td>
+                            <td>$endangeredAnimal.getTYPE()</td>
+                            <td>$endangeredAnimal.getAge()</td>
+                        </tr>
+                        #end
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="container">
+                    <h1>Add Animal</h1>
+                    <form action="/animals/new" method="post">
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <input type="text" class="form-control" id="inputName" name="inputName"
+                                       placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <label for="healthInput">Health</label>
+                                <select class="form-control" name="healthInput" id="healthInput">
+                                    <option>healthy</option>
+                                    <option>ill</option>
+                                    <option>okay</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <label for="ageInput">Age</label>
+                                <select class="form-control" id="ageInput" name="ageInput">
+                                    <option>newborn</option>
+                                    <option>young</option>
+                                    <option>adult</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="endangeredInput" name="endangeredInput">
+                            <label class="form-check-label" for="endangeredInput">Endangered?</label>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-dark btn-block w-100">Add Animal</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

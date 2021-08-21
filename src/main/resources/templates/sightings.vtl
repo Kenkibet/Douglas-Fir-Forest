@@ -1,0 +1,30 @@
+<div class="container animals-container">
+
+    <div class="animals-left">
+        <div class="animals-table">
+            <div class="card">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Ranger</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Animal Id</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    #foreach($sighting in $sightings)
+                    <tr>
+                        <th scope="row">$sighting.getId()</th>
+                        <td>$sighting.getRanger()</td>
+                        <td>$sighting.getLocation()</td>
+                        <td>$sighting.getAnimalId()</td>
+                    </tr>
+                    #end
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

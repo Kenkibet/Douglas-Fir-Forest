@@ -1,0 +1,39 @@
+<div class="container animals-container">
+
+    <div class="animals-left">
+        <div class="animals-table">
+            <div class="card">
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    #foreach($location in $locations)
+                    <tr>
+                        <th scope="row">$location.getId()</th>
+                        <td>$location.getName()</td>
+                    </tr>
+                    #end
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <form method="post" action="/locations">
+            <div class="row" style="margin-top: 2rem">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="name" id="name" name="name">
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-success">Save Location</button>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+</div>

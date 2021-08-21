@@ -1,0 +1,35 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testCompile group: 'junit', name: 'juinit', version: '4.12'
+    compile "com.sparkjava:spark-core:2.6.0"
+    compile "com.sparkjava:spark-template-handlebars:2.5.5"
+    compile 'org.slf4j:slf4j-simple:1.7.21'
+    implementation 'org.apache.velocity:velocity:1.5'
+    implementation group: 'org.sql2o', name: 'sql2o', version: '1.5.4'
+    implementation group: 'org.postgresql', name: 'postgresql', version: "9.4-1201-jdbc41"
+    implementation group: 'log4j', name: 'log4j', version: '1.2.17'
+}
+
+archivesBaseName = "Wildlife"
+version = '1.0'
+mainClassName = "App"
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+task stage(dependsOn: ['clean', 'installDist'])

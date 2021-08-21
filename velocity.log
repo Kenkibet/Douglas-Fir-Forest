@@ -1,0 +1,744 @@
+2021-08-16 00:37:10,738 - Log4JLogChute initialized using file 'velocity.log'
+2021-08-16 00:37:10,739 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2021-08-16 00:37:10,739 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2021-08-16 00:37:10,740 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-08-16 00:37:10,741 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.<init>(VelocityEngine.java:105)
+	at ViewEngine.<init>(ViewEngine.java:24)
+	at App.lambda$main$0(App.java:29)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:130)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 32 more
+2021-08-16 00:37:10,751 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:37:10,751 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:37:10,755 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2021-08-16 00:37:10,759 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:37:10,787 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2021-08-16 00:37:10,791 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-08-16 00:37:10,793 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-08-16 00:37:10,800 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-08-16 00:37:10,810 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-08-16 00:37:10,817 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-08-16 00:37:10,885 - Created '20' parsers.
+2021-08-16 00:37:10,896 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-08-16 00:37:10,898 - Velocimacro : Default library not found.
+2021-08-16 00:37:10,898 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-08-16 00:37:10,898 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-08-16 00:37:10,898 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-08-16 00:37:10,899 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-08-16 00:37:10,922 - ResourceManager : found app.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:37:10,939 - ResourceManager : found templates/main.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:40:11,369 - Log4JLogChute initialized using file 'velocity.log'
+2021-08-16 00:40:11,369 - Log4JLogChute initialized using file 'velocity.log'
+2021-08-16 00:40:11,370 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2021-08-16 00:40:11,370 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2021-08-16 00:40:11,371 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2021-08-16 00:40:11,371 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2021-08-16 00:40:11,371 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-08-16 00:40:11,371 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-08-16 00:40:11,371 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.<init>(VelocityEngine.java:105)
+	at ViewEngine.<init>(ViewEngine.java:24)
+	at App.lambda$main$1(App.java:37)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:130)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 32 more
+2021-08-16 00:40:11,371 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.<init>(VelocityEngine.java:105)
+	at ViewEngine.<init>(ViewEngine.java:24)
+	at App.lambda$main$1(App.java:37)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:130)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:199)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 32 more
+2021-08-16 00:40:11,382 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:40:11,382 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:40:11,385 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:40:11,385 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:40:11,386 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2021-08-16 00:40:11,386 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2021-08-16 00:40:11,386 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:40:11,386 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:40:11,388 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2021-08-16 00:40:11,388 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2021-08-16 00:40:11,397 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-08-16 00:40:11,397 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-08-16 00:40:11,398 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-08-16 00:40:11,398 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-08-16 00:40:11,398 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-08-16 00:40:11,398 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-08-16 00:40:11,399 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-08-16 00:40:11,399 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-08-16 00:40:11,399 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-08-16 00:40:11,399 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-08-16 00:40:11,406 - Created '20' parsers.
+2021-08-16 00:40:11,406 - Created '20' parsers.
+2021-08-16 00:40:11,406 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-08-16 00:40:11,406 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-08-16 00:40:11,412 - Velocimacro : Default library not found.
+2021-08-16 00:40:11,412 - Velocimacro : Default library not found.
+2021-08-16 00:40:11,412 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-08-16 00:40:11,412 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-08-16 00:40:11,413 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-08-16 00:40:11,413 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-08-16 00:40:11,414 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-08-16 00:40:11,414 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-08-16 00:40:11,414 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-08-16 00:40:11,414 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-08-16 00:40:11,431 - ResourceManager : found app.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:40:11,431 - ResourceManager : found app.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:40:11,438 - ResourceManager : found templates/add-new-ranger.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:40:11,438 - ResourceManager : found templates/add-new-ranger.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:41:08,796 - Log4JLogChute initialized using file 'velocity.log'
+2021-08-16 00:41:08,799 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2021-08-16 00:41:08,799 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2021-08-16 00:41:08,799 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-08-16 00:41:08,802 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.<init>(VelocityEngine.java:105)
+	at ViewEngine.<init>(ViewEngine.java:24)
+	at App.lambda$main$1(App.java:37)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:130)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 32 more
+2021-08-16 00:41:08,813 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:41:08,813 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:41:08,822 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2021-08-16 00:41:08,828 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:41:08,871 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2021-08-16 00:41:08,879 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-08-16 00:41:08,884 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-08-16 00:41:08,889 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-08-16 00:41:08,894 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-08-16 00:41:08,898 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-08-16 00:41:08,987 - Created '20' parsers.
+2021-08-16 00:41:09,020 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-08-16 00:41:09,024 - Velocimacro : Default library not found.
+2021-08-16 00:41:09,024 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-08-16 00:41:09,025 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-08-16 00:41:09,025 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-08-16 00:41:09,026 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-08-16 00:41:09,065 - ResourceManager : found app.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:41:09,081 - ResourceManager : found templates/add-new-ranger.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:41:44,115 - Log4JLogChute initialized using file 'velocity.log'
+2021-08-16 00:41:44,118 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2021-08-16 00:41:44,118 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2021-08-16 00:41:44,118 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-08-16 00:41:44,120 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.<init>(VelocityEngine.java:105)
+	at ViewEngine.<init>(ViewEngine.java:24)
+	at App.lambda$main$1(App.java:37)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:130)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 32 more
+2021-08-16 00:41:44,130 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:41:44,130 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:41:44,138 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2021-08-16 00:41:44,143 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:41:44,186 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2021-08-16 00:41:44,191 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-08-16 00:41:44,194 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-08-16 00:41:44,199 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-08-16 00:41:44,205 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-08-16 00:41:44,208 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-08-16 00:41:44,295 - Created '20' parsers.
+2021-08-16 00:41:44,314 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-08-16 00:41:44,317 - Velocimacro : Default library not found.
+2021-08-16 00:41:44,318 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-08-16 00:41:44,318 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-08-16 00:41:44,319 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-08-16 00:41:44,320 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-08-16 00:41:44,355 - ResourceManager : found app.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:41:44,372 - ResourceManager : found templates/add-new-ranger.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:42:21,057 - Log4JLogChute initialized using file 'velocity.log'
+2021-08-16 00:42:21,058 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2021-08-16 00:42:21,059 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2021-08-16 00:42:21,059 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-08-16 00:42:21,060 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.<init>(VelocityEngine.java:105)
+	at ViewEngine.<init>(ViewEngine.java:24)
+	at App.lambda$main$1(App.java:37)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:130)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 32 more
+2021-08-16 00:42:21,070 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:42:21,070 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:42:21,078 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2021-08-16 00:42:21,084 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:42:21,127 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2021-08-16 00:42:21,133 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-08-16 00:42:21,142 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-08-16 00:42:21,147 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-08-16 00:42:21,152 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-08-16 00:42:21,155 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-08-16 00:42:21,245 - Created '20' parsers.
+2021-08-16 00:42:21,265 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-08-16 00:42:21,268 - Velocimacro : Default library not found.
+2021-08-16 00:42:21,269 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-08-16 00:42:21,269 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-08-16 00:42:21,270 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-08-16 00:42:21,270 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-08-16 00:42:21,302 - ResourceManager : found app.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:42:21,314 - ResourceManager : found templates/add-new-ranger.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:58:45,014 - Log4JLogChute initialized using file 'velocity.log'
+2021-08-16 00:58:45,017 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2021-08-16 00:58:45,017 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2021-08-16 00:58:45,017 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-08-16 00:58:45,021 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.<init>(VelocityEngine.java:105)
+	at ViewEngine.<init>(ViewEngine.java:24)
+	at App.lambda$main$1(App.java:37)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:130)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 32 more
+2021-08-16 00:58:45,035 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:58:45,036 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 00:58:45,045 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2021-08-16 00:58:45,055 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:58:45,113 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2021-08-16 00:58:45,121 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-08-16 00:58:45,127 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-08-16 00:58:45,137 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-08-16 00:58:45,144 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-08-16 00:58:45,152 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-08-16 00:58:45,460 - Created '20' parsers.
+2021-08-16 00:58:45,497 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-08-16 00:58:45,515 - Velocimacro : Default library not found.
+2021-08-16 00:58:45,521 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-08-16 00:58:45,521 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-08-16 00:58:45,521 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-08-16 00:58:45,522 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-08-16 00:58:45,569 - ResourceManager : found app.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 00:58:45,583 - ResourceManager : found templates/add-new-ranger.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:09:57,636 - Log4JLogChute initialized using file 'velocity.log'
+2021-08-16 01:09:57,639 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2021-08-16 01:09:57,639 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2021-08-16 01:09:57,639 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-08-16 01:09:57,645 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.<init>(VelocityEngine.java:105)
+	at ViewEngine.<init>(ViewEngine.java:24)
+	at App.lambda$main$6(App.java:118)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:130)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 32 more
+2021-08-16 01:09:57,688 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 01:09:57,688 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 01:09:57,782 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2021-08-16 01:09:57,789 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:09:57,867 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2021-08-16 01:09:57,883 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-08-16 01:09:57,890 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-08-16 01:09:57,896 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-08-16 01:09:57,900 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-08-16 01:09:57,904 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-08-16 01:09:58,051 - Created '20' parsers.
+2021-08-16 01:09:58,075 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-08-16 01:09:58,082 - Velocimacro : Default library not found.
+2021-08-16 01:09:58,082 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-08-16 01:09:58,082 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-08-16 01:09:58,083 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-08-16 01:09:58,083 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-08-16 01:09:58,146 - ResourceManager : found app.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:09:58,189 - ResourceManager : found templates/animals.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:12:58,616 - Log4JLogChute initialized using file 'velocity.log'
+2021-08-16 01:12:58,617 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2021-08-16 01:12:58,617 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2021-08-16 01:12:58,617 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-08-16 01:12:58,619 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.<init>(VelocityEngine.java:105)
+	at ViewEngine.<init>(ViewEngine.java:24)
+	at App.lambda$main$6(App.java:118)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:130)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 32 more
+2021-08-16 01:12:58,630 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 01:12:58,630 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 01:12:58,634 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2021-08-16 01:12:58,640 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:12:58,672 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2021-08-16 01:12:58,676 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-08-16 01:12:58,679 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-08-16 01:12:58,684 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-08-16 01:12:58,690 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-08-16 01:12:58,692 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-08-16 01:12:58,761 - Created '20' parsers.
+2021-08-16 01:12:58,775 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-08-16 01:12:58,778 - Velocimacro : Default library not found.
+2021-08-16 01:12:58,778 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-08-16 01:12:58,778 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-08-16 01:12:58,779 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-08-16 01:12:58,779 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-08-16 01:12:58,808 - ResourceManager : found app.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:12:58,835 - ResourceManager : found templates/animals.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:13:43,439 - Log4JLogChute initialized using file 'velocity.log'
+2021-08-16 01:13:43,441 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2021-08-16 01:13:43,442 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2021-08-16 01:13:43,442 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-08-16 01:13:43,444 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.<init>(VelocityEngine.java:105)
+	at ViewEngine.<init>(ViewEngine.java:24)
+	at App.lambda$main$6(App.java:118)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:130)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 32 more
+2021-08-16 01:13:43,453 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 01:13:43,453 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 01:13:43,459 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2021-08-16 01:13:43,462 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:13:43,492 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2021-08-16 01:13:43,495 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-08-16 01:13:43,497 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-08-16 01:13:43,500 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-08-16 01:13:43,503 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-08-16 01:13:43,504 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-08-16 01:13:43,575 - Created '20' parsers.
+2021-08-16 01:13:43,588 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-08-16 01:13:43,590 - Velocimacro : Default library not found.
+2021-08-16 01:13:43,591 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-08-16 01:13:43,592 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-08-16 01:13:43,593 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-08-16 01:13:43,593 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-08-16 01:13:43,625 - ResourceManager : found app.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:13:43,655 - ResourceManager : found templates/animals.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:14:59,634 - Log4JLogChute initialized using file 'velocity.log'
+2021-08-16 01:14:59,636 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2021-08-16 01:14:59,636 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2021-08-16 01:14:59,636 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-08-16 01:14:59,638 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.<init>(VelocityEngine.java:105)
+	at ViewEngine.<init>(ViewEngine.java:24)
+	at App.lambda$main$6(App.java:118)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:130)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 32 more
+2021-08-16 01:14:59,648 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 01:14:59,648 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 01:14:59,655 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2021-08-16 01:14:59,661 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:14:59,704 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2021-08-16 01:14:59,709 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-08-16 01:14:59,713 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-08-16 01:14:59,720 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-08-16 01:14:59,725 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-08-16 01:14:59,729 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-08-16 01:14:59,830 - Created '20' parsers.
+2021-08-16 01:14:59,846 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-08-16 01:14:59,850 - Velocimacro : Default library not found.
+2021-08-16 01:14:59,851 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-08-16 01:14:59,851 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-08-16 01:14:59,853 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-08-16 01:14:59,853 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-08-16 01:14:59,887 - ResourceManager : found app.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:14:59,923 - ResourceManager : found templates/animals.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:16:33,006 - Log4JLogChute initialized using file 'velocity.log'
+2021-08-16 01:16:33,008 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2021-08-16 01:16:33,008 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2021-08-16 01:16:33,008 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2021-08-16 01:16:33,010 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:534)
+	at org.apache.velocity.app.VelocityEngine.<init>(VelocityEngine.java:105)
+	at ViewEngine.<init>(ViewEngine.java:24)
+	at App.lambda$main$6(App.java:118)
+	at spark.RouteImpl$1.handle(RouteImpl.java:72)
+	at spark.http.matching.Routes.execute(Routes.java:61)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:130)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:317)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.Invocable.invokePreferred(Invocable.java:128)
+	at org.eclipse.jetty.util.thread.Invocable$InvocableExecutor.invoke(Invocable.java:222)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:294)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 32 more
+2021-08-16 01:16:33,022 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 01:16:33,023 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2021-08-16 01:16:33,031 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2021-08-16 01:16:33,038 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:16:33,089 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2021-08-16 01:16:33,103 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2021-08-16 01:16:33,108 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2021-08-16 01:16:33,122 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2021-08-16 01:16:33,127 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2021-08-16 01:16:33,132 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2021-08-16 01:16:33,266 - Created '20' parsers.
+2021-08-16 01:16:33,291 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2021-08-16 01:16:33,294 - Velocimacro : Default library not found.
+2021-08-16 01:16:33,295 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2021-08-16 01:16:33,296 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2021-08-16 01:16:33,297 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2021-08-16 01:16:33,298 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2021-08-16 01:16:33,390 - ResourceManager : found app.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2021-08-16 01:16:33,444 - ResourceManager : found templates/animals.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
